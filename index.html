@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Being Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Rubik', 'sans-serif'],
+            },
+            colors: {
+              neu: {
+                base: '#E0E5EC',
+                light: '#ffffff',
+                dark: '#A3B1C6',
+                accent: '#D4AF37', // Metallic Gold/Brass
+                text: '#4A5568',
+                textLight: '#A0AEC0'
+              }
+            },
+            boxShadow: {
+              'neu-flat': '9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)',
+              'neu-pressed': 'inset 6px 6px 10px 0 rgba(163,177,198, 0.7), inset -6px -6px 10px 0 rgba(255,255,255, 0.8)',
+              'neu-convex': 'linear-gradient(145deg, #ffffff, #e6e6e6)',
+              'neu-concave': 'linear-gradient(145deg, #cacaca, #f0f0f0)',
+              'neu-floating': '20px 20px 60px #bebebe, -20px -20px 60px #ffffff',
+              'neu-glow': '0 0 15px rgba(212, 175, 55, 0.5)',
+            },
+            animation: {
+              'breathe': 'breathe 4s ease-in-out infinite',
+              'spin-slow': 'spin 8s linear infinite',
+            },
+            keyframes: {
+              breathe: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.05)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #E0E5EC; /* Fallback */
+        overflow: hidden; /* Prevent scrolling on desktop behind emulator */
+      }
+      /* Custom Scrollbar for the emulator */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      
+      /* Light Neumorphic Scrollbar for Admin Panel */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 14px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: #E0E5EC;
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #CBD5E0;
+        border-radius: 10px;
+        border: 4px solid #E0E5EC; /* Creates the spacing/padding effect */
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #A0AEC0;
+      }
+
+      /* Input autofill styling hack for neumorphism */
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus, 
+      input:-webkit-autofill:active{
+          -webkit-box-shadow: inset 0 0 0 30px #E0E5EC !important;
+          -webkit-text-fill-color: #4A5568 !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?external=react,react-dom",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?external=react,react-dom",
+    "recharts": "https://esm.sh/recharts@2.12.0?external=react,react-dom",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
